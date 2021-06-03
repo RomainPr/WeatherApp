@@ -3,9 +3,9 @@ import React from 'react';
 
 // == Import components
 import Header from 'src/components/Header';
-import Search from 'src/components/Search';
-import DailyForecast from 'src/components/DailyForecast';
-import WeeklyForecast from 'src/components/WeeklyForecast';
+import Search from 'src/containers/connectedSearch';
+import DailyForecast from 'src/containers/connectedDaily';
+import WeeklyForecast from 'src/containers/connectedWeekly';
 
 // == Import
 import './styles.scss';

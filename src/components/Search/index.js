@@ -10,8 +10,8 @@ const Search = ({ query, onChangeQuery, onSubmitQuery }) => (
       placeholder="Chercher une ville"
       className="searchQuery__input"
       value={query}
-      onSubmit={onChangeQuery}
-      onChange={onSubmitQuery}
+      onSubmit={onSubmitQuery}
+      onChange={onChangeQuery}
     />
   </form>
 );
