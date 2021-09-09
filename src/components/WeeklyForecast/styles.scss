@@ -1,0 +1,9 @@
+.weeklyForecast {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    & .ui.card {
+        width: 200px;
+    }
+}

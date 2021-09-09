@@ -3,10 +3,9 @@ import { connect } from 'react-redux';
 import WeeklyForecast from 'src/components/WeeklyForecast';
 
 const mapStateToProps = (state) => ({
-  day: state.weekly.day,
-  date: state.weekly.date,
-  icon: state.weekly.icon,
-  temperature: state.weekly.temperature,
+  data: state.weekly.data,
+  isVisible: state.weekly.isVisible,
+  query: state.search.query,
 });
 
 export default connect(mapStateToProps)(WeeklyForecast);

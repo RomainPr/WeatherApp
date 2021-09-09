@@ -1,0 +1,13 @@
+.autocomplete {
+    &__list {
+        max-width: 400px;
+        margin: 0 auto;
+        &__item {
+            cursor: pointer;
+            padding: 0.2em;
+        }
+        &__item:hover {
+            color: red;
+        }
+    }
+}

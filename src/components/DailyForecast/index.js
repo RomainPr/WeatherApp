@@ -2,37 +2,45 @@ import React from 'react';
 import { Segment } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
+import './styles.scss';
+
 const DailyForecast = ({
   city,
-  temperature,
+  temp,
   icon,
   day,
-  weather,
+  condition,
   precipitation,
+  isVisible,
 }) => (
-  <Segment>
-    <div className="dailyForecast">
-      <h2 className="dailyForecast_title">{city}</h2>
-      <p className="dailyForecast_temperature">{temperature}</p>
-      <img src={icon} alt="" />
-    </div>
-    <div className="dailyForecastDescription">
-      <ul>
-        <li>{day}</li>
-        <li>Weather : {weather}</li>
-        <li>Precipitation : {precipitation}</li>
-      </ul>
-    </div>
-  </Segment>
+  <>
+    {isVisible && (
+      <Segment className="dailyContainer">
+        <div className="dailyForecast">
+          <h2 className="dailyForecast__title">{city}</h2>
+          <p className="dailyForecast__temperature">{temp}°</p>
+          <img src={icon} alt="" />
+        </div>
+        <div className="dailyForecastDescription">
+          <ul>
+            <li>jour: {day}</li>
+            <li>Weather : {condition}</li>
+            <li>Precipitation : {precipitation}</li>
+          </ul>
+        </div>
+      </Segment>
+    )}
+  </>
 );
 
 DailyForecast.propTypes = {
   city: PropTypes.string.isRequired,
-  temperature: PropTypes.number.isRequired,
+  temp: PropTypes.number.isRequired,
   icon: PropTypes.any.isRequired,
-  day: PropTypes.string.isRequired,
-  weather: PropTypes.string.isRequired,
-  precipitation: PropTypes.string.isRequired,
+  day: PropTypes.number.isRequired,
+  condition: PropTypes.string.isRequired,
+  precipitation: PropTypes.number.isRequired,
+  isVisible: PropTypes.bool.isRequired,
 };
 
 export default DailyForecast;
